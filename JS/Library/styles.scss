@@ -1,0 +1,49 @@
+:root{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+   --theme-color: #101010;
+   --theme-text-color: white;
+}
+
+.header{
+   position: absolute;
+   width: 100%;
+   height: 15vh;
+   background-color: var(--theme-color);
+   text-align: left;
+   .theme-container{
+      position: absolute;;
+      right: 2%;
+      margin: 5vh 0;
+   }
+   #dark{
+      display: none;
+   }
+   .light{
+      display: block;
+   }
+   
+   .heading{
+      margin: 4.5vh;
+      position: absolute;
+      color: var(--theme-text-color);
+   }
+  
+   .login-bt1{
+      background-color: white;
+      width: 150px;
+      margin: 4.5vh 0;
+      height: 50px;
+      position: absolute;
+      font-size: 16pt;
+      right: 10%;
+      border-radius: 20px;
+      color: black;
+      display: table-cell;
+      vertical-align: middle;
+      align-content: center;
+      }
+   
+}
