@@ -9,15 +9,55 @@
 
     </head>
     <body>
+        
+        <div id="newBookWindow"class="newBookWindow">
+            <div class="newBook-wrapper">
+                <div class="newbook-inputs">
+            <label for="bookName">Book Name</label><br>
+            <input class="bookInput"type="text" id="bookName" maxlength="40" name="bookName" placeholder="Enter Book Name"><br>
+            <label for="bookName">Author</label><br>
+            <input class="bookInput"type="text" id="authorName" maxlength="40" name="authorName" placeholder="Enter Autor Name"><br>
+            <label for="bookName">Total Pages</label><br>
+            <input class="bookInput"type="text" onkeypress="isInputNumber(event)" maxlength="5" id="pagesTotal" name="pagesTotal" placeholder="Enter Total Pages"><br>
+            <label for="bookName">Read Pages</label><br>
+            <input class="bookInput"type="text" onkeypress="isInputNumber(event)" maxlength="5" id="pagesRead" name="pagesRead" placeholder="Enter Read Pages"><br>
+            
+           <label for="read">Read?</label>
+            <input type="checkbox"  name="read" id="read" autocomplete="off"><br>
+            
+            <button class="bookbtn addBook" id="addBook">Add Book</button><button class="bookbtn cancel" id="Cancel">Cancel</button>
+        </div>
+        </div>
+        </div>
+
+        <div class="main">
+            <div class="main-container">
+                 <div id="addNew" class="addNew"><span>+</span></div>
+            </div>
+        </div>
         <div class="header">
             <div class="theme-container">
                 <a  id="dark"><img src="assets/icons/weather-night.png" alt="" class="dark theme-selector"></a>
                 <a  id="light"><img src="assets/icons/weather-sunny(1).png" alt="" class="light theme-selector"></a>
             </div>
-            <h1 class="heading">Your Book Collection</h1>
+            <h1 class="heading">Your Book Collection 📚</h1>
             <div class="btn-parent"><button class="login-bt1">Login</button></div>
-            
         </div>
+        <div class="sidebar">
+            <div class="sidebar-wrapper">
+                <h1 class="heading1">Information</h1>
+                <div class="info">
+                    <ul>
+                        <li class="infoitem1">Books</li>
+                        <li class="infoitem2">Completed Books</li>
+                        <li class="infoitem3">Total Pages</li>
+                        <li class="infoitem4">Completed Pages</li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
         <script src="script.js">
 
         </script>

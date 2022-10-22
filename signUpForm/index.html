@@ -22,11 +22,11 @@
             <div class="left-forms">
             <div class="form1" id="form-field">            
               <label  for="fname">First Name</label>
-              <input type="text" pattern="^[^0-9]+$"   placeholder="John" name="fname" id="fname" class="form-control" required>
+              <input type="text" pattern=isNumber()   placeholder="John" name="fname" id="fname" class="form-control" required>
             </div>
             <div class="form2" id="form-field">
               <label for="lname" >Last Name</label>
-              <input type="text" pattern="^[^0-9]+$"  placeholder="Doe" name="lname" id="lname" class="form-control" required>
+              <input type="text" pattern="isNumber()"  placeholder="Doe" name="lname" id="lname" class="form-control" required>
             </div>
             <div class="form3" id="form-field">
               <label for="email" >Email</label>

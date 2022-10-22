@@ -5,8 +5,10 @@
    list-style: none;
    --theme-color: #101010;
    --theme-text-color: white;
+   --theme-sidebar-color: rgb(70, 70, 70);
+   --card-color: black;
+   --plus: url(assets/images/icons/plus-dark.png);
 }
-
 .header{
    position: absolute;
    width: 100%;
@@ -46,4 +48,97 @@
       align-content: center;
       }
    
+}
+.sidebar{
+   height: 100vh;
+   width: 20%;
+   position: absolute;
+   z-index: -1;
+   background-color: var(--theme-sidebar-color);
+   color: var(--theme-text-color);
+   .sidebar-wrapper{
+      margin: 20vh 10%;
+      border: red solid 2px;
+      position:absolute;
+      width: 80%;
+      height: 80vh;
+   }
+}
+.main{
+   .main-container{
+      margin-top: 15vh;
+      margin-left: 20vw;
+      width: 80%;
+      height: 85vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 20px;
+      position: absolute;
+      
+      .addNew{
+         cursor: pointer;
+         vertical-align: middle;
+         display: flex;
+         padding: 40px;
+         position: absolute;
+         border: black 2px solid;
+         border-radius: 20px;
+         margin: 2rem 4rem;
+         align-items: center;
+         justify-content: center;
+         font-size: 8rem; // =128px
+         vertical-align: auto;
+         box-sizing: border-box;
+         span{
+            line-height: 128px;
+            height: 150px; // for the paddings
+         }
+      }
+   }
+}
+.newBookWindow{
+   display: none;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);   
+   z-index: 1;
+   .newBook-wrapper{
+      z-index: 0;
+      color: white;
+      background-color: rgb(39, 39, 39);
+      padding: 5rem 5rem;
+      border-radius: 20px;
+      display: table;
+      .newbook-inputs{
+         #read{
+            margin: 20px 0;
+         }
+         .bookInput{
+            border-radius: 20px;
+            margin: 10px 0;
+            position: relative;
+            width: 30rem;
+             padding: 5px 15px;  
+         
+         }
+      }
+      
+      .bookbtn{
+         margin: 0 20px;
+         border: 2px solid black;
+         border-radius: 20px;
+         padding: 10px 20px;
+      }
+      .cancel{
+         background-color: red;
+         
+      }
+      .addBook{
+         background-color: green;
+         
+      }
+      
+   }
+
 }
