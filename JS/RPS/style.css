@@ -1,0 +1,52 @@
+body {
+  background-color: #323232;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 80rem;
+  height: 40rem;
+  position: fixed;
+  top: 50%;
+  border-radius: 40px;
+  box-shadow: #101010 5px 5px 10px;
+  left: 50%;
+  translate: -50% -50%;
+  background-color: #1d489d;
+}
+.container .image-wrapper {
+  position: absolute;
+  width: 70rem;
+  height: 20rem;
+  margin: 0rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container .image-wrapper img {
+  width: 20rem;
+  height: 20rem;
+  cursor: pointer;
+}
+.container .heading {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: white;
+}
+.container .result .bottom {
+  margin: 25rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 10px;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+.result {
+  content: "Lose";
+  margin-top: -1rem;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
