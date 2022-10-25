@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Raleway:wght@700&display=swap");
 :root {
   margin: 0;
   padding: 0;
@@ -7,11 +8,11 @@
   --theme-text-color: white;
   --theme-sidebar-color: rgb(70, 70, 70);
   --card-color: black;
-  --plus: url(assets/images/icons/plus-dark.png);
+  --window-color: rgb(39, 39, 39);
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 15vh;
   background-color: var(--theme-color);
@@ -20,7 +21,7 @@
 .header .theme-container {
   position: absolute;
   right: 2%;
-  margin: 5vh 0;
+  margin: 50px 0;
 }
 .header #dark {
   display: none;
@@ -51,7 +52,7 @@
 .sidebar {
   height: 100vh;
   width: 20%;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   background-color: var(--theme-sidebar-color);
   color: var(--theme-text-color);
@@ -70,33 +71,73 @@
   width: 80%;
   height: 85vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
   position: absolute;
 }
-.main .main-container .addNew {
-  cursor: pointer;
-  vertical-align: middle;
-  display: flex;
-  padding: 40px;
+.main .main-container .card-wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  display: grid;
+  width: 90%;
+  height: 100%;
+  margin-top: 2rem;
+  margin-left: 4rem;
   position: absolute;
+}
+.main .main-container .card-wrapper .cardTemplate {
+  height: 350px;
+  border-radius: 20px;
+  position: relative;
+  display: grid;
+  border: 2px #ff0000 solid;
+  width: 300px;
+}
+.main .main-container .card-wrapper .cardTemplate .readButtons {
+  width: 125px;
+  justify-items: center;
+  vertical-align: middle;
+  height: 75px;
+  line-height: 0;
+  font-size: 80px;
+  text-align: center;
+  position: relative;
+  top: 250px;
+  border-radius: 20px;
+}
+.main .main-container .card-wrapper .cardTemplate .readButtons span {
+  bottom: 10px;
+  position: relative;
+}
+.main .main-container .card-wrapper .cardTemplate .readPage {
+  background-color: #19d28f;
+  left: 20px;
+}
+.main .main-container .card-wrapper .cardTemplate .unreadPage {
+  background-color: #ff0000;
+  left: 20px;
+}
+.main .main-container .card-wrapper .addNew {
+  display: grid;
+  padding: 40px;
+  width: 12rem;
+  height: 16rem;
+  position: relative;
   border: black 2px solid;
   border-radius: 20px;
-  margin: 2rem 4rem;
+  margin: 5rem 4rem;
   align-items: center;
   justify-content: center;
   font-size: 8rem;
   vertical-align: auto;
   box-sizing: border-box;
+  cursor: pointer;
 }
-.main .main-container .addNew span {
+.main .main-container .card-wrapper .addNew span {
   line-height: 128px;
-  height: 150px;
+  height: 162px;
 }
 
 .newBookWindow {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -104,14 +145,77 @@
 }
 .newBookWindow .newBook-wrapper {
   z-index: 0;
-  color: white;
-  background-color: rgb(39, 39, 39);
-  padding: 5rem 5rem;
+  color: var(--theme-text-color);
+  box-sizing: border-box;
+  background-color: var(--window-color);
+  padding: 4rem 5rem;
   border-radius: 20px;
   display: table;
 }
-.newBookWindow .newBook-wrapper .newbook-inputs #read {
-  margin: 20px 0;
+.newBookWindow .newBook-wrapper .newbook-inputs label {
+  font-style: italic;
+  font-size: 20px;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom #read {
+  height: 50px;
+  width: 90px;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  position: absolute;
+  outline: none;
+  margin-top: 10px;
+  background-color: rgb(120, 0, 0);
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom #read:before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #d5d5d5;
+  border-radius: 25px;
+  left: 5px;
+  top: 5px;
+  transition: 0.3s ease-in;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom #read:after {
+  content: "Unread";
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  color: var(--theme-text-color);
+  font-size: 40px;
+  left: 100px;
+  bottom: -4.5px;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom #read:checked {
+  transition: background-color 0.2s;
+  background-color: #19d28f;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom #read:checked:before {
+  font-size: 40px;
+  left: 45px;
+  transition: left 0.2s ease-out;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom #read:checked:after {
+  color: var(--theme-text-color);
+  font-family: "Raleway", sans-serif;
+  content: "Read";
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom .checkStatus {
+  width: 36px;
+  z-index: 0;
+  cursor: pointer;
+  height: 36px;
+  position: relative;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom .checkStatus #readTrue {
+  display: none;
+}
+.newBookWindow .newBook-wrapper .newbook-inputs .checkboxCustom .checkStatus #readFalse {
+  display: block;
 }
 .newBookWindow .newBook-wrapper .newbook-inputs .bookInput {
   border-radius: 20px;
@@ -121,14 +225,17 @@
   padding: 5px 15px;
 }
 .newBookWindow .newBook-wrapper .bookbtn {
-  margin: 0 20px;
+  margin-top: 5rem;
   border: 2px solid black;
   border-radius: 20px;
   padding: 10px 20px;
+  position: relative;
 }
 .newBookWindow .newBook-wrapper .cancel {
-  background-color: red;
+  background-color: rgb(182, 74, 74);
+  left: 60%;
 }
 .newBookWindow .newBook-wrapper .addBook {
-  background-color: green;
+  background-color: rgb(0, 213, 0);
+  bottom: 0%;
 }/*# sourceMappingURL=styles.css.map */

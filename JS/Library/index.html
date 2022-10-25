@@ -13,18 +13,19 @@
         <div id="newBookWindow"class="newBookWindow">
             <div class="newBook-wrapper">
                 <div class="newbook-inputs">
-            <label for="bookName">Book Name</label><br>
+            <label for="bookName"><strong>Book Name</strong> </label><br>
             <input class="bookInput"type="text" id="bookName" maxlength="40" name="bookName" placeholder="Enter Book Name"><br>
-            <label for="bookName">Author</label><br>
+            <label for="bookName"><strong>Author</strong></label><br>
             <input class="bookInput"type="text" id="authorName" maxlength="40" name="authorName" placeholder="Enter Autor Name"><br>
-            <label for="bookName">Total Pages</label><br>
+            <label for="bookName"><strong>Total Pages</strong></label><br>
             <input class="bookInput"type="text" onkeypress="isInputNumber(event)" maxlength="5" id="pagesTotal" name="pagesTotal" placeholder="Enter Total Pages"><br>
-            <label for="bookName">Read Pages</label><br>
+            <label for="bookName"><strong>Read Pages</strong></label><br>
             <input class="bookInput"type="text" onkeypress="isInputNumber(event)" maxlength="5" id="pagesRead" name="pagesRead" placeholder="Enter Read Pages"><br>
-            
-           <label for="read">Read?</label>
-            <input type="checkbox"  name="read" id="read" autocomplete="off"><br>
-            
+            <div class="checkboxCustom" id="readcontainer">
+            <input type="checkbox"  name="read" id="read" autocomplete="off" >
+           <!--- <img src="assets/icons/check-circle-outline.png" alt="" class="checkStatus" id="readTrue">
+            <img src="assets/icons/alpha-x-circle-outline.png" alt="" class="checkStatus"id="readFalse">--></div>
+            <br>
             <button class="bookbtn addBook" id="addBook">Add Book</button><button class="bookbtn cancel" id="Cancel">Cancel</button>
         </div>
         </div>
@@ -32,7 +33,21 @@
 
         <div class="main">
             <div class="main-container">
-                 <div id="addNew" class="addNew"><span>+</span></div>
+                <div class="card-wrapper">
+                    <div class="cardTemplate">
+                        <div class="card-buttons"> 
+                        <button id="readPage" class="readPage readButtons"><span>+</span></button>
+                        <button id="unreadPage" class="unreadPage readButtons">-</button></div>
+                       
+                    </div>
+                    <div class="cardTemplate"></div>
+                    <div class="cardTemplate"></div>
+                    
+                    
+                    <div  class="cardTemplate"></div>
+                    <div id="addNew" class="addNew"><span>+</span></div>
+                </div>
+                 
             </div>
         </div>
         <div class="header">

@@ -6,9 +6,25 @@ const theme2 = document.getElementById('light');
 const cancelButton = document.getElementById('Cancel')
 const addNew = document.getElementById('addNew')
 const newBookPopup = document.getElementById('newBookWindow')
+const read = document.getElementById('read')
+const readFalse = document.getElementById('readFalse')
+const readTrue = document.getElementById('readTrue')
+/*read.onclick = () =>{
+  if(readTrue.style.display === "none"){
+   
+    read.style.backgroundColor = "green"
+    readTrue.style.display = "block";
+    readFalse.style.display = "none";
+  }
+  if(readTrue.style.display === "block"){
+    read.style.backgroundColor = "red"
+    readTrue.style.display = "none";
+    readFalse.style.display = "block"; 
+  }
+}*/
 
 addNew.onclick = () =>{
-      newBookPopup.style.display = "block"; 
+      newBookPopup.style.display = "flex"; 
 }
 cancelButton.onclick = () =>{
   newBookPopup.style.display = "none";
@@ -27,11 +43,14 @@ function themeSetLight(){
     root.style.setProperty('--theme-color', 'skyblue')
     root.style.setProperty('--theme-text-color', 'black')
     root.style.setProperty('--theme-sidebar-color', 'wheat')
+    root.style.setProperty('--window-color', '#c9c9c9')
 }
 function themeSetDark(){
     root.style.setProperty('--theme-color', '#101010')
     root.style.setProperty('--theme-text-color', 'white')
     root.style.setProperty('--theme-sidebar-color', 'rgb(70, 70, 70)')
+    root.style.setProperty('--window-color', 'rgb(39, 39, 39)')
+    
 }
 function isInputNumber (evt){
   const ch = String.fromCharCode(evt.which);
