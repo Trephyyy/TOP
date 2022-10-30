@@ -9,19 +9,7 @@ const newBookPopup = document.getElementById('newBookWindow')
 const read = document.getElementById('read')
 const readFalse = document.getElementById('readFalse')
 const readTrue = document.getElementById('readTrue')
-/*read.onclick = () =>{
-  if(readTrue.style.display === "none"){
-   
-    read.style.backgroundColor = "green"
-    readTrue.style.display = "block";
-    readFalse.style.display = "none";
-  }
-  if(readTrue.style.display === "block"){
-    read.style.backgroundColor = "red"
-    readTrue.style.display = "none";
-    readFalse.style.display = "block"; 
-  }
-}*/
+
 
 addNew.onclick = () =>{
       newBookPopup.style.display = "flex"; 

@@ -59,62 +59,43 @@
 }
 .sidebar .sidebar-wrapper {
   margin: 20vh 10%;
-  border: red solid 2px;
   position: absolute;
   width: 80%;
   height: 80vh;
 }
 
-.main .main-container {
+main .main-container {
   margin-top: 15vh;
-  margin-left: 20vw;
+  margin-left: 19.5vw;
   width: 80%;
-  height: 85vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: grid;
   position: absolute;
 }
-.main .main-container .card-wrapper {
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+main .main-container .card-wrapper {
+  grid-template-columns: repeat(auto-fill, 450px);
+  grid-template-rows: repeat(auto-fill, 390px);
+  justify-content: space-between;
   display: grid;
-  width: 90%;
-  height: 100%;
-  margin-top: 2rem;
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-left: 4rem;
   position: absolute;
 }
-.main .main-container .card-wrapper .cardTemplate {
+main .main-container .card-wrapper .cardTemplate {
   height: 350px;
+  margin-top: 2rem;
   border-radius: 20px;
   position: relative;
   display: grid;
   border: 2px #ff0000 solid;
-  width: 300px;
+  width: 400px;
 }
-.main .main-container .card-wrapper .cardTemplate .readButtons {
-  width: 125px;
-  justify-items: center;
-  vertical-align: middle;
-  height: 75px;
-  line-height: 0;
-  font-size: 80px;
-  text-align: center;
-  position: relative;
-  top: 250px;
-  border-radius: 20px;
-}
-.main .main-container .card-wrapper .cardTemplate .readButtons span {
-  bottom: 10px;
-  position: relative;
-}
-.main .main-container .card-wrapper .cardTemplate .readPage {
-  background-color: #19d28f;
-  left: 20px;
-}
-.main .main-container .card-wrapper .cardTemplate .unreadPage {
-  background-color: #ff0000;
-  left: 20px;
-}
-.main .main-container .card-wrapper .addNew {
+main .main-container .card-wrapper .addNew {
   display: grid;
   padding: 40px;
   width: 12rem;
@@ -130,7 +111,7 @@
   box-sizing: border-box;
   cursor: pointer;
 }
-.main .main-container .card-wrapper .addNew span {
+main .main-container .card-wrapper .addNew span {
   line-height: 128px;
   height: 162px;
 }

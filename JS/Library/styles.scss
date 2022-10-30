@@ -60,68 +60,43 @@
    color: var(--theme-text-color);
    .sidebar-wrapper{
       margin: 20vh 10%;
-      border: red solid 2px;
+     // border: red solid 2px;
       position:absolute;
       width: 80%;
       height: 80vh;
    }
 }
-.main{
+main{
    .main-container{
       margin-top: 15vh;
-      margin-left: 20vw;
-      
+      margin-left: 19.5vw;
+     
       width: 80%;
-      height: 85vh;
+      height: fit-content;
       display: grid;
       position: absolute;
       .card-wrapper{
-         grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+         grid-template-columns: repeat(auto-fill, 450px);
+         grid-template-rows: repeat(auto-fill, 390px);
+         justify-content: space-between;
          display: grid;
-         width: 90%;
-         height: 100%;
-         margin-top: 2rem;
+         width: 95%;
+         height: fit-content;
          margin-left: 4rem;
          position: absolute;
             .cardTemplate{
                height: 350px;
+               margin-top: 2rem;
                border-radius: 20px;
                position: relative;
                display: grid;
                border: 2px #ff0000 solid;
-               width: 300px;
-               .readButtons{
-                  width: 125px;
-                  justify-items: center;;
-                  vertical-align: middle;
-                  height: 75px;
-                  line-height: 0;
-                  font-size: 80px;
-                  text-align: center;
-                  position: relative;
-                  top: 250px;
+               width: 400px;
+               .template-wrapper{
                   
-                 
-                  border-radius: 20px;
-                  
-                  span{
-                     bottom: 10px;
-                     position: relative;
-                  }
                }
                
-               .readPage {
-                  background-color: #19d28f;
-                  left: 20px;
-                  
-                  
-               }
-               .unreadPage {
-                  
-                  background-color: #ff0000;
-                  
-                  left: 20px;
-               }
+             
             }
             .addNew{ 
                display: grid;
